@@ -1,0 +1,147 @@
+body {
+    background-color: #121212;
+    color: #4fc3f7;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.digital-clock {
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+.date-display {
+    font-size: 1.5rem;
+    margin-top: -20px;
+    opacity: 0.8;
+}
+
+.analog-clock {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    border: 8px solid #333;
+    box-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 10px rgba(79, 195, 247, 0.2);
+    position: relative;
+}
+
+.hour-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.hour-mark {
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background-color: #4fc3f7;
+    left: 50%;
+    transform-origin: 50% 125px;
+}
+
+.hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    border-radius: 5px;
+}
+
+.hour-hand {
+    width: 8px;
+    height: 70px;
+    background-color: #4fc3f7;
+    margin-left: -4px;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+.minute-hand {
+    width: 5px;
+    height: 100px;
+    background-color: #4fc3f7;
+    margin-left: -2.5px;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+.second-hand {
+    width: 2px;
+    height: 110px;
+    background-color: #f44336;
+    margin-left: -1px;
+    box-shadow: 0 0 5px rgba(244, 67, 54, 0.8);
+}
+
+.center-circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #4fc3f7;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -7.5px;
+    margin-top: -7.5px;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.8);
+    z-index: 10;
+}
+
+.toggle-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: #4fc3f7;
+    border: 2px solid #4fc3f7;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #4fc3f7;
+    color: #121212;
+    box-shadow: 0 0 15px rgba(79, 195, 247, 0.5);
+}
+
+@media (max-width: 600px) {
+    .digital-clock {
+        font-size: 3rem;
+    }
+    
+    .analog-clock {
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    .hour-hand {
+        height: 60px;
+    }
+    
+    .minute-hand {
+        height: 85px;
+    }
+    
+    .second-hand {
+        height: 95px;
+    }
+}
